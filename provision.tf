@@ -11,14 +11,7 @@ resource "null_resource" "devops_provisioner" {
     
   }
 
-  // copy our example script to the server
-//provisioner "file" {
-  //   source = "app/script.sh"
-   //  destination = "/tmp/script.sh"
-      
-   // } 
-
- provisioner "remote-exec" {
+  provisioner "remote-exec" {
      inline = [
       "sudo apt-get update",
       "sudo apt-get install apache2",
